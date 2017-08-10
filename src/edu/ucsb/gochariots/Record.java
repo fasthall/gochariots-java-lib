@@ -1,6 +1,8 @@
 package edu.ucsb.gochariots;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONException;
@@ -8,11 +10,12 @@ import org.json.JSONObject;
 
 public class Record {
 	private Map<String, String> tags;
-	private long hash;
+	private List<Long> hash;
 	private long seed;
 
 	public Record(long seed) {
 		this.tags = new HashMap<String, String>();
+		this.hash = new ArrayList<Long>();
 		this.seed = seed;
 	}
 
@@ -24,12 +27,8 @@ public class Record {
 		tags.put(key, value);
 	}
 
-	public long getHash() {
-		return hash;
-	}
-
-	public void setHash(long hash) {
-		this.hash = hash;
+	public void addHash(long hash) {
+		this.hash.add(hash);
 	}
 
 	public long getSeed() {

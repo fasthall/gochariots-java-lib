@@ -10,8 +10,6 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Map;
 
-import org.json.JSONException;
-
 public class Gochariots {
 	private String host;
 
@@ -82,3 +80,4 @@ public class Gochariots {
 		return result;
 	}
 }
+

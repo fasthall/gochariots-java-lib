@@ -10,7 +10,7 @@ Java library for GoChariots
 
     Record record2 = new Record(seed);
     record2.add("second", "event");
-    record2.setHash(hash1); // set the second event's prerequisite hash
+    record2.addHash(hash1); // set the second event's prerequisite hash
 
     Gochariots g = new Gochariots("localhost:8080");
     // post records
